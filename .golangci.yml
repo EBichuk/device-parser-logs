@@ -1,0 +1,32 @@
+version: "2"
+run:
+  tests: false
+formatter:
+  enable:
+  - gofmt
+linters:
+  enable:
+    - bodyclose
+    - dogsled
+    - dupl
+    - durationcheck
+    - errorlint
+    - exhaustive
+    - gocognit
+    - govet
+    - goconst
+    - gocyclo
+    - godox
+    - goprintffuncname
+    - importas
+    - lll
+    - makezero
+    - prealloc
+    - predeclared
+    - rowserrcheck
+    - staticcheck
+    - testpackage
+    - tparallel
+    - unparam
+  disable:
+    - wrapcheck

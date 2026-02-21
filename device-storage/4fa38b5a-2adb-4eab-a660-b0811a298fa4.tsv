@@ -1,0 +1,7 @@
+n	mqtt	invid	unit_guid	msg_id	text	context	class	level	area	addr	block	type	bit	invert_bit
+1		G-044315	69691e50-5f91-4705-9416-b1f49156b10e	cold7_Test	Охлаждение		info	25	LOCAL	cold7_status.Test				
+2		G-044319	52c2bd87-cdd7-4374-89bd-08cbfe16f692	cold7_Test	Компрессор		alarm	40	LOCAL	cold7_status.Test				
+3		G-044308	69691e50-5f91-4705-9416-b1f49156b10e	cold7_Test	Охлаждение		event	56	LOCAL	cold7_status.Test				
+4		G-044301	52c2bd87-cdd7-4374-89bd-08cbfe16f692	cold7_Test	Охлаждение		alarm	61	LOCAL	cold7_status.Test				
+5		G-044311	52c2bd87-cdd7-4374-89bd-08cbfe16f692	cold7_Test	Вентилятор		event	53	LOCAL	cold7_status.Test				
+6		G-044309	69691e50-5f91-4705-9416-b1f49156b10e	cold7_Test	Вентилятор		warning	29	LOCAL	cold7_status.Test				

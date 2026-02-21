@@ -1,0 +1,35 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: device-logs
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - app-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+  app:
+    container_name: device-parser-logs
+    restart: unless-stopped
+    build:
+      dockerfile: dockerfile
+    ports:
+      - "${HTTP_PORT}:${HTTP_PORT}"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      MONGO_URI: mongodb://${DB_USER}:${DB_PASSWORD}@mongodb:${DB_PORT}
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

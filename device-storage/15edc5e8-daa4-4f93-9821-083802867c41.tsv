@@ -1,0 +1,3 @@
+n	mqtt	invid	unit_guid	msg_id	text	context	class	level	area	addr	block	type	bit	invert_bit
+1		G-044304	d2e69ef5-c2bd-4145-ba51-5fccb196a2a4	cold7_Test	Высокая температура		event	16	LOCAL	cold7_status.Test				
+2		G-044315	d2e69ef5-c2bd-4145-ba51-5fccb196a2a4	cold7_Test	Охлаждение		warning	22	LOCAL	cold7_status.Test				
